@@ -122,6 +122,8 @@ jobs:
 
      - name: Push to JFrog
        env:
+         ARTIFACTORY_URL: ${{ secrets.ARTIFACT_URL }}
+         JFROG_REPO_NAME: andre-utc-app
          MAVEN_USERNAME_A: ${{ env.MAVEN_USERNAME_A }}
          MAVEN_PASSWORD_A: ${{ env.MAVEN_PASSWORD_A }}
        run: |
